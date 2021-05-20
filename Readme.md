@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Alina](https://up.htmlacademy.ru/htmlcss/31/user/1756361).
-* Наставник: `Неизвестно`.
+* Наставник: [Павел Нюкало](https://htmlacademy.ru/profile/nyukalopavel)
 
 ---
 
