@@ -8,7 +8,7 @@
   <header>
     <nav>
       <a>
-        <img src="img/index-logo.svg" width="??" height="??" alt="Логотип сайта «Седона»">
+        <img src="img/index-logo.svg" width="150" height="100" alt="Логотип сайта «Седона»">
       </a>
       <ul>
         <li><a href="blank.html">Информация</a></li>
@@ -21,60 +21,57 @@
   <main>
     <h1>Городок в Аризоне «Седона»</h1>
     <section>
-      <h2>Седона — небольшой городок в Аризоне,заслуживающий большего!</h2> 
-      <h3>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h3>
-      <ul>
+      <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2> 
+      <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         <ol>
-          <h3>Настоящий<br>городок</h3>
+          <li><h3>Настоящий городок</h3>
           <p>Седона — не аттракцион для туристов, там
-            течёт своя жизнь</p>
+              течёт своя жизнь</p>
+            <ul>
+              <li>Жилье</li>
+              <li>Еда</li>
+              <li>Сувениры</li>
+            </ul>
+
+          </li>
+          <li><h3>Там есть Мост дьявола</h3>
+            <p>Да, по нему можно пройти! Если конечно
+              вы осмелитесь</p></li>
+          <li><h3>Небольшая площадь</h3>
+            <p>все достопримечательности находятся очень близко</p></li>
+          <li><h3>Красивая дорога</h3>
+            <p>ехать в седону из лас-вегаса совсем не скучно!</p></li>
+            <li><h3>Мало туристов</h3>
+              <p>большинство едет в гранд каньон и толпится там</p></li>
         </ol>
-        <ol>
-          <h3>Там есть<br>Мост дьявола</h3>
-          <p>Да, по нему можно пройти! Если конечно
-            вы осмелитесь</p>
-        </ol>
-        <ol>
-          <h3>Небольшая площадь</h3>
-          <p>все достопримечательности находятся очень близко</p>
-        </ol>
-        <ol>
-          <h3>Красивая дорога</h3>
-          <p>ехать в седону из лас-вегаса совсем не скучно!</p>
-        </ol>
-        <ol>
-          <h3>Мало туристов</h3>
-          <p>большинство едет в гранд каньон и толпится там</p>
-        </ol>
-      </ul>
     </section>
     <section>
-      <h2>Записаться</h2>
+      <h2>Заинтересовались?</h2>
       <p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-      <form action="https://echo.htmlacademy.ru" method="post">
-      </form>
-    </section>
-    <section>
-      <h2>Поиск гостиницы в Седоне</h2>
+      <button>Поиск гостиницы в Седоне</button>
       <form action="https://echo.htmlacademy.ru" method="post">
         <p>
-          <label for="appointment-date">Дата заезда</label>
-          <input id="appointment-date" type="text" name="date" placeholder="01.01.2020"> 
+          <label for="appointment-date-arrival">Дата заезда</label>
+          <input id="appointment-date-arrival" type="text" name="date" placeholder="24 апреля 2017"> <button>Календарь</button>
         </p>
         <p>
-          <label for="appointment-date">Дата выезда</label>
-          <input id="appointment-date" type="text" name="date" placeholder="01.01.2020"> 
+          <label for="appointment-date-departure">Дата выезда</label>
+          <input id="appointment-date-departure" type="text" name="date" placeholder="4 июля 2017"> <button>Календарь</button>
         </p>
         <p>
-          <label for="appointment-name">Взрослые</label>
-          <input id="appointment-name" type="text" name="name" placeholder="Борода">
+          <label for="appointment-adult">Взрослые</label>
+          <button>-</button><input id="appointment-adult" type="text" name="adult" placeholder="1"><button>+</button> 
         </p>
         <p>
-          <label for="appointment-phone">Дети</label>
-          <input id="appointment-phone" type="tel" name="phone" placeholder="+7 000 000-00-00">
+          <label for="appointment-children">Дети</label>
+          <button>-</button><input id="appointment-children" type="text" name="children" placeholder="0"><button>+</button>
         </p>
         <button type="submit">Отправить</button>
       </form>
+    </section>
+    <section>
+      <h2>Карта с координатами</h2>
+        <img src="map.jpg" alt="Карта с координатами города Седона">
     </section>
   </main>
   <footer>
@@ -100,7 +97,7 @@
     </section>
     <p>
       Website by
-      <a href="https://htmlacademy.ru">HTML Academy</a>
+      <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
     </p>
   </footer>
   </body>
