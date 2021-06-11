@@ -23,7 +23,7 @@ body {
     min-width: 960px;
     margin: 0;
     padding: 0;
-    font-family: "PT Sans", "Arial", sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: 700;
@@ -35,6 +35,7 @@ body {
     background-repeat: no-repeat;
   }
 
+/*
 a {
   text-decoration: none;
 }
@@ -43,6 +44,8 @@ img {
 max-width: 100%;
 height: auto;
 }
+
+*/
 
 .main-navigation {
   font-size: 16px;
@@ -61,29 +64,25 @@ height: auto;
 }
 
 .site-navigation-current a:not([href]) {
-  color: var(--basic-blue);
+  background-color: var(--basic-white);
 }
 
-.site-navigation a:link {
+.site-navigation a {
   color: var(--basic-black);
 }
 
-.site-navigation a:hover {
-  color: var(--basic-blue);
-}
-
-.site-navigation a:active {
-  color: var(--basic-gray);
-}
-
-.site-navigation a:focus {
-  color: var(--basic-brown);
+.site-navigation a:hover,
+.site-navigation a:focus, {
+  background-color: var(--basic-extra-white);
 }
 
 /* Features */
 
 .feature-item {
   text-align: center;
+}
+
+.feature-item li {
   list-style: none;
   color: var(--basic-black);
   background-color: var(--basic-white);
@@ -110,23 +109,17 @@ height: auto;
   color: var(--basic-white);
   vertical-align: middle;
   text-transform: uppercase;
-  background-color: var(--basic-brown);
+  background-color: var(--basic-dark);
   border: none;
 }
 
-.modal-button:link {
-  background-color: var(--basic-brown);
-}
-
-.modal-button:hover {
-  background-color: var(--basic-blue);
-}
-
+.modal-button:hover,
+.modal-button:focus,
 .modal-button:active {
-  background-color: var(--basic-extra-dark-brown);
+  background-color: var(--basic-dark-brown);
 }
 
-.modal-button:disabled {
+.modal-button.disabled {
   cursor: default;
   opacity: 0.5;
   background-color: var(--basic-brown);
