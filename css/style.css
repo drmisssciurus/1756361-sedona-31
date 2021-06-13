@@ -1,17 +1,17 @@
 /* Variables*/
 
 :root {
-  --basic-black: #000000;
-  --basic-white: #ffffff;
-  --basic-extra-light: #F2F2F2;
-  --basic-blue: #81B3D2;
-  --basic-dark-blue: #669EC0;
-  --basic-extra-dark-blue: #5496BD;
-  --basic-brown: #766357;
-  --basic-dark-brown: #604E43;
-  --basic-extra-dark-brown: #503E33;
-  --basic-gray: #EEEEEE;
-  --basic-extra-gray: #EBEBEB;
+--basic-black: #000000;
+--basic-white: #ffffff;
+--basic-extra-light: #F2F2F2;
+--basic-blue: #81B3D2;
+--basic-dark-blue: #669EC0;
+--basic-extra-dark-blue: #5496BD;
+--basic-brown: #766357;
+--basic-dark-brown: #604E43;
+--basic-extra-dark-brown: #503E33;
+--basic-gray: #EEEEEE;
+--basic-extra-gray: #EBEBEB;
 
 
 }
@@ -19,19 +19,19 @@
 /* Global */
 
 body {
-  min-width: 960px;
-  margin: 0;
-  padding: 0;
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 700;
-  color: var(--basic-black);
-  text-transform: uppercase;
-  background-color: var(--basic-white);
-  background-image: url("img/background.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
+min-width: 960px;
+margin: 0;
+padding: 0;
+font-family: "PT Sans", "Arial", sans-serif;
+font-size: 14px;
+line-height: 21px;
+font-weight: 700;
+color: var(--basic-black);
+text-transform: uppercase;
+background-color: var(--basic-white);
+background-image: url("img/background.jpg");
+background-position: top center;
+background-repeat: no-repeat;
 }
 
 a {
@@ -41,6 +41,188 @@ text-decoration: none;
 img {
 max-width: 100%;
 height: auto;
+}
+
+/* Main header */
+
+.inner-page .main-header {
+background-color: var(--basic-white);
+}
+
+/* Button */
+
+.button {
+font: inherit;
+text-align: center;
+color: var(--basic-black);
+vertical-align: middle;
+text-transform: uppercase;
+background-color: var(--basic-white);
+border: none;
+}
+
+/*.button:hover,
+.button:focus,
+.button:active {
+  background-color: var(--basic-blue);
+}
+
+.button.disabled,
+.button:disabled {
+  cursor: default;
+  opacity: 0.5;
+  background-color: var(--basic-black);
+}*/
+
+.button-detail {
+font-size: 14px;
+line-height: 21px;
+color: var(--basic-white);
+background-color: var(--basic-blue);
+}
+
+.button-bye {
+font-size: 14px;
+line-height: 21px;
+color: var(--basic-white);
+background-color: var(--basic-brown);
+}
+
+.button-detail:link {
+background-color: var(--basic-blue);
+}
+
+.button-detail:hover {
+background-color: var(--basic-dark-blue);
+}
+
+.button-detail:active {
+background-color: var(--basic-extra-dark-blue);
+color: rgba(255, 255, 255, 0.3);
+}
+
+.button-bye:link {
+background-color: var(--basic-brown);
+}
+
+.button-bye:hover {
+background-color: var(--basic-dark-brown);
+}
+
+.button-bye:active {
+background-color: var(--basic-extra-dark-brown);
+color: rgba(255, 255, 255, 0.3);
+}
+
+/*Sorting*/
+
+.sorting h2 {
+font-size: 16px;
+line-height: 21px;
+font-weight: bold;
+text-transform: uppercase;
+}
+
+.sorting h3 {
+font-size: 12px;
+line-height: 18px;
+font-weight: normal;
+text-transform: uppercase;
+}
+
+.current {
+color: var(--basic-blue);
+text-decoration-line: underline none;
+}
+
+.button-price,
+.button-type,
+.button-rate {
+font-size: 12px;
+line-height: 18px;
+font-weight: normal;
+text-transform: uppercase;
+text-decoration-line: underline;
+}
+
+
+.button-price:hover,
+.button-type:hover,
+.button-rate:hover {
+color: var(--basic-blue);
+text-decoration-line: underline;
+}
+
+.button-price:active,
+.button-type:active,
+.button-rate:active {
+color: var(--basic-black);
+text-decoration-line: underline;
+}
+
+
+
+/* Filters */
+
+.filter legend {
+font-size: 16px;
+line-height: 21px;
+}
+
+.filter ul {
+list-style: none;
+line-height: 14px;
+}
+
+.filter-input-checkbox:hover + label,
+.filter-input-checkbox:focus + label {
+color: var(--special);
+}
+
+/* Catalog */
+
+.catalog-list {
+list-style: none;
+}
+
+.catalog-item a {
+color: var(--basic-black);
+}
+
+.catalog-item-price,
+.catalog-category {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.catalog-item-title:hover {
+color: var(--basic-blue);
+}
+
+.catalog-item-title:focus {
+color: var(--basic-black);
+}
+
+.catalog-item-title:active {
+color: var(--basic-black);
+opacity: 30%;
+}
+
+.catalog-item {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.inner-page {
+color: var(--basic-black);
+background-color: var(--basic-white);
+background-image: url("img/catalog/background_catalog.png");
+background-position: 0 0;
+background-repeat: repeat;
 }
 
 .main-navigation {
