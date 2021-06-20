@@ -28,6 +28,7 @@
   font-weight: 700;
   color: var(--basic-black);
   text-transform: uppercase;
+  text-align: center;
   background-color: var(--basic-white);
   background-image: url("img/background.jpg");
   background-position: top center;
@@ -182,7 +183,7 @@ img {
 /* Container */
 
 .container {
-  width: 940px;
+  width: 1200px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -265,7 +266,6 @@ img {
   line-height: 26px;
   color: var(--basic-black);
   background-color: transparent;
-
 }
 
 .main-navigation-wrapper {
@@ -276,13 +276,13 @@ img {
   background-color: var(--basic-white);
 }
 
-.main-navigation-wrapper {
+.main-navigation-wrapper,
+.container {
   display: grid;
-  width: 940px;
+  width: 1200px;
   margin: 0 auto;
   padding: 0 10px;
 }
-
 
 .site-navigation {
   margin: 0;
@@ -320,41 +320,52 @@ img {
 
 .features-list {
   display: grid;
-  grid-template-columns: 400px 400px 400px;
-  grid-template-rows: 400px 400px 400px 400px ;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .feature-item--image {
   display: grid;
-  grid-template-columns: repeat(3, 400px);
+  grid-template-columns: repeat(3, 1fr);
   grid-column: 1 / 4;
 }
 
 .wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 400px);
-  grid-column: 0 / 1;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.wrapper img {
-  grid-column: 1/3;
+.wrapper--city {
+  grid-column: 1 / 2;
+  grid-row-start: 1;
 }
 
+.feature-item--city img {
+  grid-column: 2 / span 2;
+}
 
 .advantages {
-  color: var(--basic-black);
   display: grid;
-  grid-template-columns: repeat(3, 400px);
-  grid-column: 1/-1;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column: 1 / -1;
   grid-row-start: 2;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.advantages li {
+  list-style: none;
 }
 
 .feature-item--city {
   grid-template-rows: repeat(2, min-content);
 }
 
+.wrapper--bridge {
+  grid-column: 3 / -1;
+}
+
 .feature-item--bridge img {
-  grid-column: 1/3;
+  grid-column: 1 / 3;
 }
 
 .blue-bc {
@@ -362,20 +373,7 @@ img {
 }
 
 .gray-bc {
-  height: 226px;
   background-color: var(--basic-gray);
-}
-
-.advantages {
-  grid-column: 1/-1;
-  grid-row-start: 2;
-  display: grid;
-  grid-template-columns: repeat(3, 400px);
-  background-color: var(--basic-white);
-}
-
-.advantages li {
-  height: 332px;
 }
 
 .blue-bc {
