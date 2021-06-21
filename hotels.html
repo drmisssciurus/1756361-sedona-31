@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic;display=swap">
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="favicon/180.png">
-    <link rel="manifest" href="manifest.webmanifest">
-  </head>
-  <body class="page-body inner-page">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic;display=swap">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+<body class="page-body container inner-page">
   <header class="main-header">
-    <h1>Городок Седона</h1>
     <nav class="main-navigation">
-      <a class="main-header-logo" href="index.html">
-        <img src="img/logo.svg" width="150" height="100" alt="Логотип сайта «Седона»">
-      </a>
+    <div class="main-header-bar">
+    <h1>Городок Седона</h1>
+    <a class="main-header-logo" href="index.html">
+      <img src="img/logo.svg" width="150" height="100" alt="Логотип сайта «Седона»">
+    </a>
       <ul class="site-navigation">
         <li><a href="blank.html">Информация</a></li>
         <li><a href="blank.html">Фото и видео</a></li>
         <li><a href="map.html">Карта Штата</a></li>
         <li>Гостиницы</li>
       </ul>
+    </div>
     </nav>
   </header>
-  <main>
+  <main class="page-catalog container">
     <section>
-      <h2>Фильтр отелей</h2>
+      <h2 class="page-title">Фильтр отелей</h2>
     <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-      <fieldset>
+      <fieldset class="infrastructure">
         <legend>Инфраструктура:</legend>
         <ul>
           <li class="filter-option filter-checkbox">
@@ -47,7 +49,7 @@
           </li>
           </ul>
       </fieldset>
-      <fieldset>
+      <fieldset class="type--of--house">
         <legend>Тип жилья:</legend>
         <ul>
           <li class="filter-option filter-radio">
@@ -64,7 +66,7 @@
           </li>
           </ul>
       </fieldset>
-      <fieldset>
+      <fieldset class="by--the--day">
         <legend>Стоимость в сутки,₽</legend>
         от 0 до 3000
         <button class="filter-button button" type="submit">Показать</button>
@@ -72,71 +74,72 @@
       </form>
       </section>
       <section class="sorting">
-      <h2>Найдено 3:</h2>
-      <h3>Сортировка:</h3>
-      <ul>
-        <li><button class="button current button-price">по цене</button></li>
-        <li><button class="button button-type">по типу</button></li>
-        <li><button class="button button-rate">по рейтингу</button></li>
-        <li><button>▲</button></li>
-        <li><button>▼</button></li>
-      </ul>
-    </section>
-    <section class="catalog">
-      <h2>Список поиска</h2>
-      <ul class="catalog-list">
-        <li class="catalog-item">
-          <img src="img/catalog/hotel.jpg" width="220" height="165" alt="Amara Resort & Spa">
-          <a href="hotel.html">
-            <h3 class="catalog-item-title">Amara Resort & Spa</h3>
-          </a>
-          <p>
-            <span class="catalog-category">Гостиница</span>
-            <span class="catalog-item-price">от 4000 ₽ </span>
-          </p>
-          <p class="catalog-item-image">
-          </p>
-          <p> <!--обертка для кнопок-->
-            <button class="button button-detail" type="button">Подробнее</button>
-            <button class="button button-bye" type="button">Купить</button>
-          </p>
-            <span>Рейтинг 8.5</span>
-        </li>
-        <li class="catalog-item">
-          <img src="img/catalog/motel.jpg" width="220" height="165" alt="Desert Quail Inn">
-          <a href="motel.html">
-            <h3 class="catalog-item-title">Desert Quail Inn</h3>
-          </a>
-          <p>
-            <span class="catalog-category">Мотель</span>
-            <span class="catalog-item-price">от 3000 ₽ </span>
-          </p>
-          <p class="catalog-item-image"></p>
-          <p> <!--обертка для кнопок-->
-            <button class="button button-detail" type="button">Подробнее</button>
-            <button class="button button-bye" type="button">Купить</button>
-          </p>
-            <span>Рейтинг 8.9</span>
-        </li>
-        <li class="catalog-item">
-          <img src="img/catalog/apart.jpg" width="220" height="165" alt="Villas at Poco Diablo">
-          <a href="apart.html">
-            <h3 class="catalog-item-title">Villas at Poco Diablo</h3>
-          </a>
-          <p>
-            <span class="catalog-category">Апартаменты </span>
-            <span class="catalog-item-price">от 2000 ₽ </span>
-          </p>
-          <p class="catalog-item-image"></p>
+        <h2>Найдено 3:</h2>
+        <h3>Сортировка:</h3>
+        <ul>
+          <li><button class="button current button-price">по цене</button></li>
+          <li><button class="button button-type">по типу</button></li>
+          <li><button class="button button-rate">по рейтингу</button></li>
+          <li><button>▲</button></li>
+          <li><button>▼</button></li>
+        </ul>
+      </section>
+      <section class="catalog">
+        <h2>Список поиска</h2>
+        <ul class="catalog-list">
+          <li class="catalog-item">
+            <img src="img/catalog/hotel.jpg" width="135" height="90" alt="Amara Resort & Spa">
+            <a href="hotel.html">
+              <h3 class="catalog-item-title">Amara Resort & Spa</h3>
+            </a>
+            <p>
+              <span class="catalog-category">Гостиница</span>
+              <span class="catalog-item-price">от 4000 ₽ </span>
+            </p>
+            <p class="catalog-item-image">
+            </p>
             <p> <!--обертка для кнопок-->
-            <button class="button button-detail" type="button">Подробнее</button>
-            <button class="button button-bye" type="button">Купить</button></p>
-            <span>Рейтинг 9.2</span>
-        </li>
-      </ul>
-    </section>
+              <button class="button button-detail" type="button">Подробнее</button>
+              <button class="button button-bye" type="button">Купить</button>
+            </p>
+              <span>Рейтинг 8.5</span>
+          </li>
+          <li class="catalog-item">
+            <img src="img/catalog/motel.jpg" width="135" height="90" alt="Desert Quail Inn">
+            <a href="motel.html">
+              <h3 class="catalog-item-title">Desert Quail Inn</h3>
+            </a>
+            <p>
+              <span class="catalog-category">Мотель</span>
+              <span class="catalog-item-price">от 3000 ₽ </span>
+            </p>
+            <p class="catalog-item-image"></p>
+            <p> <!--обертка для кнопок-->
+              <button class="button button-detail" type="button">Подробнее</button>
+              <button class="button button-bye" type="button">Купить</button>
+            </p>
+              <span>Рейтинг 8.9</span>
+          </li>
+          <li class="catalog-item">
+            <img src="img/catalog/apart.jpg" width="135" height="90" alt="Villas at Poco Diablo">
+            <a href="apart.html">
+              <h3 class="catalog-item-title">Villas at Poco Diablo</h3>
+            </a>
+            <p>
+              <span class="catalog-category">Апартаменты </span>
+              <span class="catalog-item-price">от 2000 ₽ </span>
+            </p>
+            <p class="catalog-item-image"></p>
+              <p> <!--обертка для кнопок-->
+              <button class="button button-detail" type="button">Подробнее</button>
+              <button class="button button-bye" type="button">Купить</button></p>
+              <span>Рейтинг 9.2</span>
+          </li>
+        </ul>
+      </section>
   </main>
   <footer class="main-footer">
+    <div class="container">
     <section class="footer-contacts">
       <h2>#visitSEDONA</h2>
       <p>
@@ -164,6 +167,7 @@
       Website by
       <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
     </p>
-  </footer>
-  </body>
-  </html>
+  </div>
+</footer>
+</body>
+</html>
