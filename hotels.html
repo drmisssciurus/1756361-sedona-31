@@ -11,10 +11,10 @@
   <link rel="apple-touch-icon" href="favicon/180.png">
   <link rel="manifest" href="manifest.webmanifest">
 </head>
-<body class="page-body container inner-page">
+<body class="page-body inner-page">
+  <div class="container">
   <header class="main-header">
     <nav class="main-navigation">
-    <div class="main-header-bar">
     <h1>Городок Седона</h1>
     <a class="main-header-logo" href="index.html">
       <img src="img/logo.svg" width="150" height="100" alt="Логотип сайта «Седона»">
@@ -25,10 +25,9 @@
         <li><a href="map.html">Карта Штата</a></li>
         <li>Гостиницы</li>
       </ul>
-    </div>
     </nav>
   </header>
-  <main class="page-catalog container">
+  <main class="page-catalog">
     <section>
       <h2 class="page-title">Фильтр отелей</h2>
     <form class="filter" method="get" action="https://echo.htmlacademy.ru">
@@ -49,7 +48,7 @@
           </li>
           </ul>
       </fieldset>
-      <fieldset class="type--of--house">
+      <fieldset class="type-of-house">
         <legend>Тип жилья:</legend>
         <ul>
           <li class="filter-option filter-radio">
@@ -66,7 +65,7 @@
           </li>
           </ul>
       </fieldset>
-      <fieldset class="by--the--day">
+      <fieldset class="by-the-day">
         <legend>Стоимость в сутки,₽</legend>
         от 0 до 3000
         <button class="filter-button button" type="submit">Показать</button>
@@ -96,13 +95,11 @@
               <span class="catalog-category">Гостиница</span>
               <span class="catalog-item-price">от 4000 ₽ </span>
             </p>
-            <p class="catalog-item-image">
-            </p>
             <p> <!--обертка для кнопок-->
               <button class="button button-detail" type="button">Подробнее</button>
               <button class="button button-bye" type="button">Купить</button>
             </p>
-              <span>Рейтинг 8.5</span>
+              <span class="rate">Рейтинг 8.5</span>
           </li>
           <li class="catalog-item">
             <img src="img/catalog/motel.jpg" width="135" height="90" alt="Desert Quail Inn">
@@ -118,7 +115,7 @@
               <button class="button button-detail" type="button">Подробнее</button>
               <button class="button button-bye" type="button">Купить</button>
             </p>
-              <span>Рейтинг 8.9</span>
+              <span class="rate">Рейтинг 8.9</span>
           </li>
           <li class="catalog-item">
             <img src="img/catalog/apart.jpg" width="135" height="90" alt="Villas at Poco Diablo">
@@ -133,13 +130,12 @@
               <p> <!--обертка для кнопок-->
               <button class="button button-detail" type="button">Подробнее</button>
               <button class="button button-bye" type="button">Купить</button></p>
-              <span>Рейтинг 9.2</span>
+              <span class="rate">Рейтинг 9.2</span>
           </li>
         </ul>
       </section>
   </main>
   <footer class="main-footer">
-    <div class="container">
     <section class="footer-contacts">
       <h2>#visitSEDONA</h2>
       <p>
@@ -167,7 +163,7 @@
       Website by
       <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
     </p>
-  </div>
 </footer>
+</div>
 </body>
 </html>
