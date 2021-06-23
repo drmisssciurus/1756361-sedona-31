@@ -245,13 +245,11 @@ img {
 
 /* Catalog */
 
-.catalog {
-  display: grid;
-}
-
+/*
 .catalog h2 {
   grid-column: 1 / -1;
 }
+*/
 
 .catalog-item {
   display: grid;
