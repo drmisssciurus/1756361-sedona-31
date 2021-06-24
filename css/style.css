@@ -33,7 +33,6 @@
   background-image: url("img/background.jpg");
   background-position: top center;
   background-repeat: no-repeat;
-
   min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -79,6 +78,11 @@ img {
 .main-header-logo {
   order: 0;
   justify-self: center;
+}
+
+.main-header-logo {
+  width: 138px;
+  height: 70px;
 }
 
 /* Button */
@@ -214,6 +218,7 @@ img {
 /* Filters */
 
 .filter legend {
+
   font-size: 16px;
   line-height: 21px;
 }
@@ -231,6 +236,11 @@ img {
 .filter {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+
+.filter {
+  color: var(--basic-white);
+  background-image: url("../img/catalog/background_catalog.png");
 }
 
 .infrastructure,
@@ -316,7 +326,6 @@ img {
 .inner-page {
   color: var(--basic-black);
   background-color: var(--basic-white);
-  background-image: url("img/catalog/background_catalog.png");
   background-position: 0 0;
   background-repeat: repeat;
 }
@@ -324,21 +333,17 @@ img {
 /* Main navigation */
 
 .main-navigation {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 16px;
   line-height: 20px;
   color: var(--basic-white);
   background-color: transparent;
 }
 
-.main-navigation {
-  font-size: 16px;
-  line-height: 26px;
-  color: var(--basic-black);
-  background-color: transparent;
-}
-
 .main-navigation-wrapper {
+  width: 100%;
   background-color: var(--basic-white);
 }
 
@@ -351,6 +356,7 @@ img {
 }
 
 .site-navigation {
+  width: 740;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -534,20 +540,20 @@ img {
 /* Main footer */
 
 .main-footer {
+  display: flex;
   padding: 60px 0;
   margin-top: 65px;
-  text-align: center;
-  color: var(--basic-black);
-  background-color: var(--basic-white);
-}
-
-.main-footer .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 65px;
+  border: none;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255 , 0.9);
+  outline: 5px solid rgba(255, 0, 0 , 0.3);
 }
 
 .footer-contacts {
-  margin: 0;
+  height: 61px;
+  outline: 5px solid rgba(255, 0, 0 , 0.3);
+  margin: 0 136px;
   width: 320px;
 }
 
@@ -563,14 +569,23 @@ img {
   text-decoration: none;
 }
 
-.footer-social {
-  width: 145px;
-  justify-self: center;
+.footer-social li {
+  list-style: none;
+}
+
+.footer-social  {
+  width: 150px;
+  height: 48px;
+  outline: 5px solid rgba(255, 0, 0 , 0.3);
+  margin: 0px;
+  padding: 0px;
 }
 
 .footer-copyright {
-max-width: 150px;
-margin: 0;
+  width: 204px;
+  height: 33px;
+  outline: 5px solid rgba(255, 0, 0 , 0.3);
+  margin: 0 131px;
 }
 
 /* Social button */
