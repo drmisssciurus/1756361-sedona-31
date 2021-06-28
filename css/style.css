@@ -74,15 +74,16 @@ img {
 
 /* Logo */
 
-.main-header-bar,
-.main-header-logo {
-  order: 0;
-  justify-self: center;
-}
-
 .main-header-logo {
   width: 138px;
   height: 70px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0px;
+  margin: 0px;
 }
 
 /* Button */
@@ -333,9 +334,6 @@ img {
 /* Main navigation */
 
 .main-navigation {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   font-size: 16px;
   line-height: 20px;
   color: var(--basic-white);
@@ -348,18 +346,39 @@ img {
 }
 
 .main-header-bar {
+  height: 56px;
   background-color: var(--basic-white);
 }
 
-.main-navigation-wrapper {
+.site-navigation {
   display: grid;
+  grid-template-columns: repeat(2, 230px) 1fr repeat(2, 230px); /*Изменено мной*/
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 0 72px;
+  margin: 0px;
+  list-style: none;
 }
 
-.site-navigation {
-  width: 740;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+/*Добавлено мной*/
+.site-navigation li {
+  padding: 15px 0;
+}
+
+/*Добавлено мной*/
+.site-navigation li:nth-child(3) {
+  grid-column-start: 4;
+}
+
+/*Добавлено мной*/
+.site-navigation li:nth-child(-n + 2) {
+  text-align: left;
+}
+
+/*Добавлено мной*/
+.site-navigation li:nth-child(3),
+.site-navigation li:nth-child(4) {
+  text-align: right;
 }
 
 .site-navigation-current a:not([href]) {
@@ -551,7 +570,6 @@ img {
 }
 
 .footer-contacts {
-  height: 61px;
   outline: 5px solid rgba(255, 0, 0 , 0.3);
   margin: 0 136px;
   width: 320px;
@@ -569,21 +587,24 @@ img {
   text-decoration: none;
 }
 
-.footer-social li {
-  list-style: none;
-}
-
-.footer-social  {
+.footer-social {
+  display: flex;
+  justify-content: space-around;
   width: 150px;
-  height: 48px;
   outline: 5px solid rgba(255, 0, 0 , 0.3);
   margin: 0px;
   padding: 0px;
 }
 
+.footer-social ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
 .footer-copyright {
   width: 204px;
-  height: 33px;
   outline: 5px solid rgba(255, 0, 0 , 0.3);
   margin: 0 131px;
 }
