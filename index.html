@@ -30,43 +30,49 @@
     </nav>
   </header>
   <main>
-    <img src="img/background_photo.jpeg" width="1200" height="509" alt="Логотип сайта «Седона»">
-    <h1>Городок в Аризоне «Седона»</h1>
+    <img src="img/background_photo.png" width="1200" height="509" alt="Логотип сайта «Седона»">
+    <h1 class="visually-hidden">Городок в Аризоне «Седона»</h1>
     <section class="features">
-      <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+      <h2>Седона — небольшой городок в Аризоне,<br>
+заслуживающий большего!</h2>
       <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       <ol class="features-list">
         <li class="feature-item feature-item--image feature-item--city blue-bc">
           <div class="wrapper wrapper--city">
-            <h3>Настоящий городок</h3>
+            <h3>Настоящий <br> городок</h3>
+            <span>— №1 —</span>
             <p>Седона — не аттракцион для туристов, там
             течёт своя жизнь</p>
           </div>
           <img src="img/true_town.jpg" width="800" height="256" alt="Фотография Города Седона">
             <ul class="advantages">
-            <li>Жилье</li>
-            <li>Еда</li>
-            <li>Сувениры</li>
+            <li class="advantages-house"><h3>Жилье</h3> Рекомендуем пожить в настоящем мотеле, всё как в кино!</li>
+            <li class="advantages-food"><h3>Еда</h3> Рекомендуем пожить в настоящем мотеле, всё как в кино!</li>
+            <li class="advantages-souvenirs"><h3>Сувениры</h3> Не только китайского, но и местного производства!</li>
             </ul>
         </li>
         <li class="feature-item feature-item--image feature-item--bridge blue-bc">
           <img src="img/devil_bridge.jpg" width="800" height="256" alt="Фотография Моста Дьявола">
           <div class="wrapper wrapper--bridge">
           <h3>Там есть Мост дьявола</h3>
+          <span>— №2 —</span>
           <p>Да, по нему можно пройти! Если конечно
             вы осмелитесь</p>
           </div>
         </li>
-        <li class="feature-item gray-bc">
+        <li class="wrapper feature-item gray-bc">
           <h3>Небольшая площадь</h3>
+          <span>— №3 —</span>
           <p>все достопримечательности находятся очень близко</p>
         </li>
-        <li class="feature-item gray-bc">
+        <li class="wrapper feature-item gray-bc">
           <h3>Красивая дорога</h3>
+          <span>— №4 —</span>
           <p>ехать в седону из лас-вегаса совсем не скучно!</p>
         </li>
-        <li class="feature-item gray-bc">
+        <li class="wrapper feature-item gray-bc">
           <h3>Мало туристов</h3>
+          <span>— №5 —</span>
           <p>большинство едет в гранд каньон и толпится там</p>
         </li>
       </ol>
@@ -111,19 +117,26 @@
       </p>
     </section>
     <section class="footer-social">
-      <h2>Давайте дружить!</h2>
+      <h2 class="visually-hidden">Давайте дружить!</h2>
       <ul>
         <li>
           <a class="social-button" href="#">Ютуб</a>
-          <img src="img/youtube.svg" width="150" height="100" alt="Иконка сайта Youtube">
+          <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="white"/>
+            </svg>
         </li>
         <li>
           <a class="social-button" href="#">Фейсбук</a>
-          <img src="img/fb-icon.svg" width="150" height="100" alt="Иконка сайта Facebook">
+          <svg width="12" height="22" viewBox="0 0 12 22" fill="none">
+            <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
+            </svg>
+
         </li>
         <li>
-          <a class="social-button" href="#">Инстаграм</a>
-          <img src="img/twitter.svg" width="150" height="100" alt="Иконка сайта Instagram">
+          <a class="social-button" href="#">Твиттер</a>
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+            <path d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z" fill="white"/>
+          </svg>
         </li>
       </ul>
     </section>
