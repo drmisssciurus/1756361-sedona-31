@@ -4,7 +4,6 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic;display=swap">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
@@ -16,7 +15,6 @@
   <div class="container">
   <header class="main-header">
     <nav class="main-navigation">
-      <div class="main-header-bar">
         <a class="main-header-logo">
           <img src="img/logo.svg" width="138" height="70" alt="Логотип сайта «Седона»">
         </a>
@@ -26,7 +24,6 @@
         <li><a href="map.html">Карта Штата</a></li>
         <li><a href="hotels.html">Гостиницы</a></li>
       </ul>
-      </div>
     </nav>
   </header>
   <main>
@@ -79,11 +76,11 @@
     </section>
     <section class="appointment">
       <h2>Заинтересовались?</h2>
-      <p class="appointment-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
+      <p class="appointment-info">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
       <button class="modal-button">Поиск гостиницы в Седоне</button>
       <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
         <p class="appointment-item date-arrival">
-          <label for="appointment-date-arrival">Дата заезда</label>
+          <label for="appointment-date-arrival">Дата заезда:</label>
           <input id="appointment-date-arrival" type="text" name="date" placeholder="24 апреля 2017">
           <button class="modal-arrival">
             <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -92,8 +89,8 @@
             </svg>
           </button>
         </p>
-        <p class="appointment-item">
-          <label for="appointment-date-departure">Дата выезда</label>
+        <p class="appointment-item date-departure">
+          <label for="appointment-date-departure">Дата выезда:</label>
           <input id="appointment-date-departure" type="text" name="date" placeholder="4 июля 2017">
           <button class="modal-calender">
             <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -102,8 +99,9 @@
             </svg>
           </button>
         </p>
-        <p class="appointment-item">
-          <label for="appointment-adult">Взрослые</label>
+      <div class="adult-children-wrapper">
+        <p class="appointment-item adult">
+          <label for="appointment-adult">Взрослые:</label>
           <button>
             <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="12" height="3" fill="#A9A9A9"/>
@@ -116,8 +114,8 @@
               </svg>
           </button>
         </p>
-        <p class="appointment-item">
-          <label for="appointment-children">Дети</label>
+        <p class="appointment-item children">
+          <label for="appointment-children">Дети:</label>
           <button>
             <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="12" height="3" fill="#A9A9A9"/>
@@ -131,6 +129,7 @@
               </svg>
             </button>
         </p>
+      </div>
         <button class="submit" type="submit">Найти</button>
       </form>
     </section>
@@ -139,7 +138,7 @@
       <img src="img/map.jpg" width="1199" height="594" alt="Карта с координатами города Седона">
     </section>
   </main>
-  <footer class="main-footer">
+  <footer class="main-footer footer-first-page">
     <section class="footer-contacts">
       <h2>#visitSEDONA</h2>
       <p>
