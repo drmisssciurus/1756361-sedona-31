@@ -185,8 +185,8 @@ img {
 /*Sorting*/
 
 .sorting {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -196,22 +196,27 @@ img {
   padding: 0px;
 }
 
+.sorting-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .sorting li {
-  display: inline;
-  grid-column: 2 / -1;
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0px;
   padding: 0px;
 }
 
 .sorting h2 {
-  font-size: 16px;
+  font-size: 21px;
   line-height: 21px;
   font-weight: bold;
   text-transform: uppercase;
   margin: 0px;
   padding: 0px;
-  margin-left: 30px;
+  margin-left: 70px;
 }
 
 .sorting h3 {
@@ -221,7 +226,8 @@ img {
   text-transform: uppercase;
   margin: 0px;
   padding: 0px;
-  margin-left: auto;
+  margin-left: 46px;
+  margin-right: 40px;
 }
 
 .current {
@@ -277,18 +283,34 @@ img {
 }
 
 .filter-option {
-  padding-top: 20px;
+  padding-bottom: 25px;
 }
 
-/* .filter-option label{
-  margin-bottom: 10px;
-} */
+.filter-option label {
+  margin-left: 30px;
+}
 
 .check-input {
   position: absolute;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.check-input-off,
+.check-input-on {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+}
+
+.check-input-off {
+  background-image: url(../img/checkbox-off.svg);
+}
+
+.check-input-on {
+  width: 27px;
+  background-image: url(../img/checkbox-on.svg);
 }
 
 .filter-input-checkbox:hover + label,
@@ -301,7 +323,7 @@ img {
   grid-template-columns: repeat(3, min-content);
   padding-top: 30px;
   padding-right: 70px;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
   padding-left: 70px;
   color: var(--basic-white);
   background-image: url("../img/catalog/background_catalog.png");
@@ -313,6 +335,11 @@ img {
   border: none;
   margin: 0px;
   padding: 0px;
+}
+
+.infrastructure legend,
+.type-of-house legend {
+  padding-bottom: 23px;
 }
 
 .type-of-house{
@@ -416,7 +443,8 @@ img {
 }
 
 .range-toggle:hover {
-  border: 10px solid var(--basic-white);
+  /* border: 10px solid var(--basic-white); */
+  transform: scale(1.4);
 }
 
 .range-toggle-min {
@@ -488,8 +516,7 @@ img {
 }
 
 .rate-wrapper {
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
   width: 183px;
 }
 
@@ -503,27 +530,27 @@ img {
 
 .star {
   content: "";
-  display: block;
-  background-position: center;
+  display: flex;
+  background-position: center right;
   position: relative;
-  padding-bottom: 47px;
+  padding-bottom: 80px;
   background-image: url("../img/catalog/star.svg");
   align-items: flex-end;
 }
 
 .star-four {
   background-repeat: repeat-x;
-  width: 90px;
+  width: 75px;
 }
 
 .star-three {
   background-repeat: repeat-x;
-  width: 66px;
+  width: 55px;
 }
 
 .star-two {
   background-repeat: repeat-x;
-  width: 42px;
+  width: 35px;
 }
 
 .rate span {
@@ -532,16 +559,15 @@ img {
 }
 
 .rate {
-  display: flex;
+  display: block;
   background-color: var(--basic-extra-light);
   font-size: 14px;
   line-height: 21px;
   text-align: center;
   width: 110px;
   height: min-content;
-  padding: 8px 15px;
-  margin-right: 32px;
-  margin-top: 40px;
+  padding: 8px 5px;
+  margin-top: 15px;
   font-weight: normal;
   align-items: center;
 }
@@ -771,7 +797,7 @@ img {
 .advantages li {
   padding-left: 50px;
   padding-right: 50px;
-  padding-bottom: 87px;
+  padding-bottom: 80px;
   padding-top: 30px;
   font-size: 14px;
   line-height: 21px;
@@ -830,7 +856,7 @@ img {
 
 .gray-bc h3 {
   margin: 0px;
-  padding-bottom: 15px;
+  padding-bottom: 25px;
 }
 
 .gray-bc {
@@ -885,7 +911,9 @@ img {
 .appointment h2 {
   margin: 0px;
   padding-top: 65px;
-  padding-bottom: 40px;
+  padding-bottom: 35px;
+  font-size: 30px;
+  line-height: 24px;
 }
 
 .appointment-info {
@@ -905,8 +933,7 @@ img {
 }
 
 .appointment h2 {
-  font-size: 30px;
-  line-height: 24px;
+
 }
 
 .appointment-item {
@@ -928,6 +955,7 @@ img {
 input::placeholder {
   color: var(--basic-black);
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .date-arrival,
@@ -947,7 +975,11 @@ input::placeholder {
 .children  {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
+}
+
+.children  {
+  padding-right: 15px;
 }
 
 .modal-arrival,
@@ -967,7 +999,7 @@ input::placeholder {
 }
 
 .children input {
-  margin-right: 15px;
+  /* margin-right: 15px; */
 }
 
 .appointment-item input {
@@ -981,7 +1013,7 @@ input::placeholder {
   border: none;
   box-sizing: border-box;
   font: inherit;
-  background-color: var(--basic-neutral);
+  background-color: var(--basic-extra-light);
 }
 
 .adult-children-wrapper input,
