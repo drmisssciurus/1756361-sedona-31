@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version,not dead,not ie <= 11
+*/
+
 /* Variables*/
 
 :root {
@@ -57,6 +64,7 @@
   background-repeat: no-repeat;
   min-height: 100%;
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
 }
@@ -78,7 +86,8 @@ img {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -126,19 +135,6 @@ img {
   background-color: var(--basic-white);
   border: none;
 }
-
-/*.button:hover,
-.button:focus,
-.button:active {
-  background-color: var(--basic-blue);
-}
-
-.button.disabled,
-.button:disabled {
-  cursor: default;
-  opacity: 0.5;
-  background-color: var(--basic-black);
-}*/
 
 .button-detail,
 .button-bye {
@@ -241,21 +237,24 @@ img {
   line-height: 18px;
   font-weight: normal;
   text-transform: uppercase;
-  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .button-price:hover,
 .button-type:hover,
 .button-rate:hover {
   color: var(--basic-blue);
-  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .button-price:active,
 .button-type:active,
 .button-rate:active {
   color: var(--basic-black);
-  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 /* Container */
@@ -305,12 +304,12 @@ img {
 }
 
 .check-input-off {
-  background-image: url(../img/checkbox-off.svg);
+  background-image: url(../img/checkbox_off.svg);
 }
 
 .check-input-on {
   width: 27px;
-  background-image: url(../img/checkbox-on.svg);
+  background-image: url(../img/checkbox_on.svg);
 }
 
 .filter-input-checkbox:hover + label,
@@ -320,12 +319,14 @@ img {
 
 .filter {
   display: grid;
+  grid-template-columns: repeat(3, -webkit-min-content);
   grid-template-columns: repeat(3, min-content);
   padding-top: 30px;
   padding-right: 70px;
   padding-bottom: 5px;
   padding-left: 70px;
   color: var(--basic-white);
+  background-color: var(--basic-dark-blue);
   background-image: url("../img/catalog/background_catalog.png");
 }
 
@@ -565,6 +566,8 @@ img {
   line-height: 21px;
   text-align: center;
   width: 110px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
   height: min-content;
   padding: 8px 5px;
   margin-top: 15px;
@@ -725,6 +728,7 @@ img {
 .features-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, -webkit-min-content);
   grid-template-rows: repeat(3, min-content);
   list-style: none;
   margin: 0px;
@@ -828,6 +832,7 @@ img {
 }
 
 .feature-item--city {
+  grid-template-rows: repeat(2, -webkit-min-content);
   grid-template-rows: repeat(2, min-content);
 }
 
@@ -932,10 +937,6 @@ img {
   padding: 55px;
 }
 
-.appointment h2 {
-
-}
-
 .appointment-item {
   margin: 0;
   position: relative;
@@ -950,6 +951,18 @@ img {
   font-weight: bold;
   line-height: 26px;
   color: var(--basic-black);
+}
+
+input::-webkit-input-placeholder {
+  color: var(--basic-black);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+input::-moz-placeholder {
+  color: var(--basic-black);
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 input::placeholder {
@@ -998,10 +1011,6 @@ input::placeholder {
   margin-right: 35px;
 }
 
-.children input {
-  /* margin-right: 15px; */
-}
-
 .appointment-item input {
   display: flex;
   width: 346px;
@@ -1042,6 +1051,9 @@ input::placeholder {
   border-color: var(--basic-white);
 }
 
+.main-map {
+  background-color: var(--basic-extra-light);
+}
 
 /* Main footer */
 
