@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 2 version,not dead,not ie <= 11
-*/
-
 /* Variables*/
 
 :root {
@@ -26,6 +19,7 @@
   --basic-main-footer: rgba(255, 255, 255 , 0.9);
   --basic-range-toggle: #ababab;
   --basic-range-toggle-shadow: rgba(0, 1, 1, 0.2);
+  --basic-footer-copyright: #BDBBBC;
 }
 
 /* Global */
@@ -197,6 +191,10 @@ img {
   flex-wrap: wrap;
 }
 
+.sorting-wrapper-up-down {
+  margin-left: 500px;
+}
+
 .sorting li {
   display: flex;
   flex-wrap: wrap;
@@ -226,9 +224,35 @@ img {
   margin-right: 40px;
 }
 
+.sorting-down {
+  fill: var(--basic-blue);
+}
+
+.sorting-up:link path,
+.sorting-down:link path {
+  fill: var(--basic-footer-copyright);
+}
+
+.sorting-up:hover path,
+.sorting-down:hover path {
+  fill: var(--basic-black);
+}
+
+.sorting-up:active path,
+.sorting-down:active path  {
+  fill: var(--basic-blue);
+}
+
 .current {
   color: var(--basic-blue);
 }
+
+.button-price,
+.button-type {
+  margin-right: 30px;
+}
+
+
 
 .button-price,
 .button-type,
@@ -237,24 +261,32 @@ img {
   line-height: 18px;
   font-weight: normal;
   text-transform: uppercase;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+}
+
+.button-price:link,
+.button-type:link,
+.button-rate:link {
+  color: var(--basic-shadow);
+  border-bottom: dotted var(--basic-shadow);
 }
 
 .button-price:hover,
 .button-type:hover,
 .button-rate:hover {
   color: var(--basic-blue);
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  border-bottom: dotted var(--basic-blue);
 }
 
 .button-price:active,
 .button-type:active,
 .button-rate:active {
   color: var(--basic-black);
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+}
+
+.button-price:visited,
+.button-type:visited,
+.button-rate:visited {
+  color: var(--basic-blue);
 }
 
 /* Container */
@@ -296,21 +328,28 @@ img {
   appearance: none;
 }
 
-.check-input-off,
-.check-input-on {
+.check-box {
+  display: block;
   position: absolute;
   width: 23px;
   height: 23px;
-}
-
-.check-input-off {
   background-image: url(../img/checkbox_off.svg);
 }
 
-.check-input-on {
+.check-input:checked + .check-box {
   width: 27px;
   background-image: url(../img/checkbox_on.svg);
 }
+
+/*
+.check-input:disabled + .check-box {
+  background-image: url(../img/checkbox_off_disabled.svg);
+}
+.check-input:checked:disabled + .check-box {
+  background-image: url(../img/checkbox_on_disabled.svg);
+}
+*/
+
 
 .filter-input-checkbox:hover + label,
 .filter-input-checkbox:focus + label {
@@ -1003,12 +1042,42 @@ input::placeholder {
   background-color: transparent;
 }
 
+.modal-arrival:link path,
+.modal-calender:link path {
+  fill: var(--basic-footer-copyright);
+}
+
+.modal-arrival:hover path,
+.modal-calender:hover path {
+  fill: var(--basic-black);
+}
+
+.modal-arrival:active path,
+.modal-calender:active path {
+  fill: var(--basic-blue);
+}
+
 .adult label {
   margin-right: 35px;
 }
 
 .children label {
   margin-right: 35px;
+}
+
+.plus:link path,
+.minus:link rect {
+  fill: var(--basic-footer-copyright);
+}
+
+.plus:hover path,
+.minus:hover rect {
+  fill: var(--basic-black);
+}
+
+.plus:active path,
+.minus:active rect  {
+  fill: var(--basic-blue);
 }
 
 .appointment-item input {
@@ -1023,6 +1092,17 @@ input::placeholder {
   box-sizing: border-box;
   font: inherit;
   background-color: var(--basic-extra-light);
+}
+
+.appointment-item:link input {
+  background-color: var(--basic-extra-light);
+}
+.appointment-item:hover input{
+  background-color: var(--basic-extra-gray);
+}
+.appointment-item:active input {
+  background-color: var(--basic-white);
+  border: 1px solid var(--basic-border);
 }
 
 .adult-children-wrapper input,
@@ -1045,6 +1125,19 @@ input::placeholder {
   text-transform: uppercase;
   background-color: var(--basic-blue);
   border: none;
+}
+
+.submit:link {
+  background-color: var(--basic-blue);
+}
+
+.submit:hover {
+  background-color: var(--basic-dark-blue);
+}
+
+.submit:active {
+  background-color: var(--basic-extra-dark-blue);
+  color: var(--basic-active-button);
 }
 
 .appointment-item input:focus {
@@ -1144,14 +1237,31 @@ input::placeholder {
   text-decoration: none;
 }
 
-.social-button:hover,
-.social-button:focus {
+.social-button:link {
+  background-color: var(--basic-blue);
+}
+
+.social-button:hover {
   background-color: var(--basic-dark-blue);
 }
 
-.footer-copyright .button:hover,
-.footer-copyright .button:focus {
-  color: var(--basic-white);
-  background-color: var(--basic-black);
-  text-decoration: none;
+.social-button:active {
+  background-color: var(--basic-extra-dark-blue);
+  fill: var(--basic-active-button);
+}
+
+.social-button:active path {
+  fill: var(--basic-active-button);
+}
+
+.footer-copyright:link path {
+  fill: var(--basic-black);
+}
+
+.footer-copyright:hover path {
+  fill: var(--basic-blue);
+}
+
+.footer-copyright:active path {
+  fill: var(--basic-footer-copyright);
 }
