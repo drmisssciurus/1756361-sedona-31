@@ -193,7 +193,7 @@ img {
 }
 
 .sorting-wrapper-up-down {
-  margin-left: 500px;
+  margin-left: 498px;
 }
 
 .sorting li {
@@ -211,7 +211,7 @@ img {
   text-transform: uppercase;
   margin: 0px;
   padding: 0px;
-  margin-left: 70px;
+  margin-left: 73px;
 }
 
 .sorting h3 {
@@ -240,9 +240,12 @@ img {
   fill: var(--basic-blue);
 }
 
-.button-price,
-.button-type {
-  margin-right: 30px;
+.button-price {
+  margin-right: 32px;
+}
+
+.button-rate {
+  margin-left: 35px;
 }
 
 .button-price,
@@ -401,7 +404,7 @@ img {
   width: 320px;
   color: var(--basic-white);
   text-transform: uppercase;
-  margin-left: 360px;
+  margin-left: 355px;
 }
 
 .filter-range-title {
@@ -413,7 +416,7 @@ img {
 
 .price-controls {
   position: relative;
-  height: 36px;
+  height: 33px;
   margin-bottom: 20px;
   font-size: 0;
   border: 2px solid var(--basic-white);
@@ -434,7 +437,7 @@ img {
 .price-controls label {
   display: inline-block;
   font-size: 14px;
-  line-height: 38px;
+  line-height: 34px;
   vertical-align: top;
   cursor: pointer;
 }
@@ -538,7 +541,7 @@ img {
   align-items: flex-start;
   width: 258px;
   padding-left: 32px;
-  padding-top: 25px;
+  padding-top: 27px;
   padding-bottom: 30px;
   justify-content: space-between;
   align-items: center;
