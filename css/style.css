@@ -1170,8 +1170,8 @@ input::placeholder {
   justify-content: space-between;
   position: relative;
   background-color: var(--basic-main-footer);
-  padding-left: 73px;
-  padding-right: 73px;
+  padding-left: 75px;
+  padding-right: 71px;
   text-align: center;
 }
 
